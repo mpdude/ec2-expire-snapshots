@@ -238,6 +238,29 @@ h1. FILES
 - $HOME/.my.cnf := Default values for MySQL user and password are sought here in the standard format.
 - $HOME/.awssecret := Default values for access key and secret access keys are sought here. Can be overridden by environment variables and command line options.
 
+h1. IAM POLICY
+
+The following policy can help you to set up the IAM user or role with appropriate permissions to run this program.
+
+<pre>
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "1",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeSnapshots"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
+</pre>
+
 h1. SEE ALSO
 
 - Amazon EC2 := - Amazon EC2 EBS (Elastic Block Store) := - ec2-consistent-snapshot := 
