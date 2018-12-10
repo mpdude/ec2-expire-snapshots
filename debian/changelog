@@ -1,3 +1,10 @@
+ec2-expire-snapshots (0.14-webfactory2) bionic; urgency=low
+
+  * Fix authentication in the eu-central-1 region by merging
+    https://github.com/alestic/ec2-expire-snapshots/pull/37
+
+ -- Matthias Pigulla <mp@webfactory.de>  Mon, 10 Dec 2018 13:22:49 +0100
+
 ec2-expire-snapshots (0.14-webfactory1) bionic; urgency=low
 
   * Prepare Launchpad PPA webfactory build
