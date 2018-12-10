@@ -113,6 +113,8 @@ $Debug and warn "$Prog: Using AWS access key: $aws_access_key_id\n";
 my $ec2 = Net::Amazon::EC2->new(
     ((! $use_iam_role) ? (AWSAccessKeyId  => $aws_access_key_id,) : () ),
     ((! $use_iam_role) ? (SecretAccessKey => $aws_secret_access_key) : () ),
+    signature_version => 4,
+    ($region ? (region => $region) : ()),
     ($ec2_endpoint ? (base_url => $ec2_endpoint) : ()),
     # ($Debug ? (debug => 1) : ()),
   );
