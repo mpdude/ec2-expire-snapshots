@@ -1,3 +1,9 @@
+ec2-expire-snapshots (0.14-webfactory1) bionic; urgency=low
+
+  * Prepare Launchpad PPA webfactory build
+
+ -- Matthias Pigulla <mp@webfactory.de>  Wed, 07 Nov 2018 22:02:30 +0100
+
 ec2-expire-snapshots (0.14) vivid; urgency=medium
 
   * Warn, not die, when unable to delete snapshot in use,
